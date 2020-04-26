@@ -31,7 +31,7 @@ class Triangulo{
 //Conectar con el html
 const btn1=document.getElementById("btnRectangulo");
 
-//Aqui debemos asociarle el comportamiento "click"
+//asociarle el comportamiento "click" al boton
 btn1.addEventListener('click',()=>{
 
     let base=document.getElementById("base").value;
@@ -48,8 +48,6 @@ btn1.addEventListener('click',()=>{
     divRes.innerHTML="<p>RECTANGULO</p>";
     divRes.innerHTML+="<p>Base: " + rect1.base + " Altura: " + rect1.altura + "</p>";
     divRes.innerHTML+="<p>AREA = " + rect1.area() + "</p>";
-
-    //divRes.innerHTML="<p>RECTANGULO -> Base: " + rect1.base + " Altura: " + rect1.altura + " AREA = " + rect1.area() + "</p>";
 });
 
 //boton cuadrado
@@ -64,7 +62,6 @@ btn2.addEventListener('click',()=>{ //asociar el comportamiendo al boton
     //crear la figura
     let cuad1 = new Cuadrado(base);
    
-    //imprimir la info
     let divRes=document.getElementById("resultados");
     divRes.innerHTML="<p>CUADRADO</p>";
     divRes.innerHTML+="<p>Lado: " + cuad1.base + "</p>";
@@ -84,17 +81,9 @@ btn3.addEventListener('click',()=>{ //asociar el comportamiendo al boton
 
     //crear la figura
     let tria1 = new Triangulo(base,altura);
-   
-    //imprimir la info
+ 
     let divRes=document.getElementById("resultados");
     divRes.innerHTML="<p>TRIANGULO</p>";
     divRes.innerHTML+="<p>Base: " + tria1.base + " Altura: " + tria1.altura + "</p>";
     divRes.innerHTML+="<p>AREA = " + tria1.area() + "</p>";
-    //divRes.innerHTML="<p>TRIANGULO -> Base: " + tria1.base + " Altura: " + tria1.altura + " AREA = " + tria1.area() + "</p>";
-    
 });
-
-
-
-
-
